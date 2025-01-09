@@ -1,9 +1,10 @@
-[![Python 3.19](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-31014/)
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-31014/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![CodeFactor](https://www.codefactor.io/repository/github/tio-ikim/cellvit/badge)](https://www.codefactor.io/repository/github/tio-ikim/cellvit)
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/></a>
 [![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FTIO-IKIM%2FCellViT&label=Visitors&countColor=%23263759&style=flat)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FTIO-IKIM%2FCellViT)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/cellvit-vision-transformers-for-precise-cell/panoptic-segmentation-on-pannuke)](https://paperswithcode.com/sota/panoptic-segmentation-on-pannuke?p=cellvit-vision-transformers-for-precise-cell)
+
 ___
 <p align="center">
   <img src="./docs/figures/banner.png"/>
@@ -42,8 +43,6 @@ ___
 
 <details>
   <summary>Installation (conda + pip) - Fast</summary>
-
-
 
 1. Create an environment
     ```bash
@@ -127,7 +126,7 @@ Note: If the script runs successfully, your environment is ready for use. This a
 The Docker Image will be released upon acceptance.
 
 ### Model Checkpoints
-Checkpoints can be downloaded here (we will change to zenodo soon when the code is intended to go public) from [Google-Drive](https://drive.google.com/drive/folders/1ujtMcxAr5kYYuvnbglfYZZnRH3ZOli79?usp=sharing). They should be placed inside the `./checkpoints` folder. Classifier checkpoints are already located inside the `./checkpoints/classifier` folder.
+Checkpoints can be downloaded here from [Google-Drive](https://drive.google.com/drive/folders/1ujtMcxAr5kYYuvnbglfYZZnRH3ZOli79?usp=sharing). They should be placed inside the `./checkpoints` folder. Classifier checkpoints are already located inside the `./checkpoints/classifier` folder. Unfortunately, we cannot share all checkpoints due to their license.
 
 ## Framework Overview
 
@@ -585,6 +584,12 @@ We will add scripts to convert cellvit annotations into the annoation tool datas
 
 ## Citation
 
+**CellViT++**
+```latex
+TBD
+```
+
+
 **CellViT**
 ```latex
 @ARTICLE{Horst2024,
@@ -603,8 +608,4 @@ We will add scripts to convert cellvit annotations into the annoation tool datas
               transformer",
   language = "en"
 }
-```
-**CellViT++**
-```latex
-TBD
 ```
