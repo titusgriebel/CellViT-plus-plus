@@ -4,7 +4,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/tio-ikim/cellvit-plus-plus/badge)](https://www.codefactor.io/repository/github/tio-ikim/cellvit-plus-plus)
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/></a>
 ![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2FTIO-IKIM%2FCellViT-plus-plus&label=Visitors&countColor=%2337d67a&style=flat)
-
+[![arXiv](https://img.shields.io/badge/arXiv-2501.05269-b31b1b.svg)](https://arxiv.org/abs/2501.05269)
 ___
 <p align="center">
   <img src="./docs/figures/banner.png"/>
