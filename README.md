@@ -1,9 +1,9 @@
 [![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-31014/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![CodeFactor](https://www.codefactor.io/repository/github/tio-ikim/cellvit/badge)](https://www.codefactor.io/repository/github/tio-ikim/cellvit)
+[![CodeFactor](https://www.codefactor.io/repository/github/tio-ikim/cellvit-plus-plus/badge)](https://www.codefactor.io/repository/github/tio-ikim/cellvit-plus-plus)
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/></a>
-[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FTIO-IKIM%2FCellViT&label=Visitors&countColor=%23263759&style=flat)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FTIO-IKIM%2FCellViT)
+![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2FTIO-IKIM%2FCellViT-plus-plus&label=Visitors&countColor=%2337d67a&style=flat)
 
 ___
 <p align="center">
@@ -21,12 +21,30 @@ ___
 
 ## Key Features
 
+---
+
+> **Update 08.08.2023**:
+>
+> :ballot_box_with_check: Adding token based classifiers to be used for multiple cell classification taxonomies
+>
+> :ballot_box_with_check: Efficient runtime for finetuning by using caching
+>
+> :ballot_box_with_check: Improved CLI and functionality - See Examples
+>
+> :ballot_box_with_check: Web-based Viewer (see [Visualization](#Visualization))
+>
+> :ballot_box_with_check: We include [PathoPatcher](https://github.com/TIO-IKIM/PathoPatcher) as pre-processing framework
+>
+> :ballot_box_with_check: More stable - If issues occur, please contact us!
+---
+
 
 #### Visualization
 <div align="center">
 
 ![Example](docs/figures/web-viewer.gif)
 
+For more information about the viewer, see [below](#web-based-viewer) 
 </div>
 
 ## Installation
@@ -586,7 +604,15 @@ We will add scripts to convert cellvit annotations into the annoation tool datas
 
 **CellViT++**
 ```latex
-TBD
+@misc{hörst2025cellvitenergyefficientadaptivecell,
+      title={CellViT++: Energy-Efficient and Adaptive Cell Segmentation and Classification Using Foundation Models}, 
+      author={Fabian Hörst and Moritz Rempe and Helmut Becker and Lukas Heine and Julius Keyl and Jens Kleesiek},
+      year={2025},
+      eprint={2501.05269},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2501.05269}, 
+}
 ```
 
 
