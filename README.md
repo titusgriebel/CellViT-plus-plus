@@ -19,6 +19,11 @@ ___
 
 </div>
 
+
+> [!TIP]
+> To access the previous version (CellViT), follow this [link](https://github.com/TIO-IKIM/CellViT)
+
+
 ## Key Features
 
 ---
