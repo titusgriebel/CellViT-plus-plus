@@ -152,7 +152,7 @@ This framework consists of 3 key components: **CellViT++ Algorithm**, **Cell Cla
 
 <div align="center" style="max-width: 400px; margin: 0 auto;">
     <img src="docs/figures/framework.jpeg" style="width: 100%; max-width: 400px;" alt="Example">
-        <figcaption style="text-align: center; font-style: italic; padding-top: 5px;">Created with BioRender</figcaption>
+        <figcaption style="text-align: center; font-style: italic; padding-top: 5px;">Created in BioRender. Hörst, F. (2025) https://BioRender.com/t54t384</figcaption>
 
 </div>
 We subsequently introduce all models, starting with the algorithm.
