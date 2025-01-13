@@ -585,7 +585,7 @@ The viewer is dockerized and can be started with `docker compose -f ./viewer/doc
            label_codes: {"Tumor": 1, "Non-Tumor": 0, "Apoptosis": "A1"}
            draw_bounding_box: False
            ```
-       Note: In this example 6 labels are used for the annoation process
+       Note: In this example 6 labels are used for the annotation process
 
 </details>
 
@@ -603,7 +603,7 @@ The viewer is dockerized and can be started with `docker compose -f ./viewer/doc
 
 
 We provide an **example dataset** in the annotation_tool folder, which can be used out of the box. Just enter the path `/dataset` on the website after initial startup. Credentials for login are in the [annotation_tool/.env](annotation_tool/.env) file (user: admin, pw: admin1234).
-We will add scripts to convert cellvit annotations into the annoation tool dataset format upon acceptance.
+We will add scripts to convert cellvit annotations into the annotation tool dataset format upon acceptance.
 
 ## Citation
 
