@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import time
 import importlib.util
-
+import subprocess
 
 def check_module(module_name):
     """Check if a module is installed in the environment."""
@@ -18,6 +18,23 @@ def log_message(message, level="INFO"):
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
     print(f"[{timestamp}] [{level}] {message}")
 
+def run_ray_test():
+    """Run the ray_test.py script."""
+    try:
+        log_message("Executing 'cellvit/inference/ray_test.py'...", "INFO")
+        result = subprocess.run(
+            ["python", "cellvit/inference/ray_test.py"],
+            check=True,
+            capture_output=True,
+            text=True
+        )
+        log_message(f"Script output:\n{result.stdout}", "SUCCESS")
+    except subprocess.CalledProcessError as e:
+        log_message(f"Error while running 'ray_test.py': {e.stderr}", "ERROR")
+        raise e
+    except Exception as e:
+        log_message(f"Unexpected error while running 'ray_test.py': {e}", "ERROR")
+        raise e
 
 try:
     # Import essential libraries
@@ -137,6 +154,8 @@ try:
 except Exception as e:
     log_message(f"Unexpected error during CuCIM check: {e}", "ERROR")
     raise e
+
+run_ray_test()
 
 log_message("")
 log_message("")

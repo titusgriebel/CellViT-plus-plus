@@ -49,4 +49,3 @@ cufile.log
 # annotation tool
 /annotation_tool/application
 /annotation_tool/Dockerfile
-cellvit/inference/ray_test.py
