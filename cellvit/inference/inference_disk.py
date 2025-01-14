@@ -12,6 +12,7 @@
 # University Medicine Essen
 
 import os
+import sys
 import uuid
 import warnings
 from pathlib import Path
@@ -49,6 +50,13 @@ from cellvit.utils.logger import Logger
 from cellvit.utils.tools import unflatten_dict
 from cellvit.models.classifier.linear_classifier import LinearClassifier
 
+# get the project root:
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)
+sys.path.append(current_dir)
+sys.path.append(project_root)
+project_root = os.path.dirname(project_root)
+sys.path.append(project_root)
 
 class CellViTInference:
     """Cell Segmentation Inference class.
@@ -364,8 +372,12 @@ class CellViTInference:
 
     def _setup_worker(self) -> None:
         """Setup the worker for inference"""
-        # ray.init(local_mode=True)
-        ray.init(num_cpus=os.cpu_count() - 2)
+        runtime_env = {
+            "env_vars": {
+                "PYTHONPATH": project_root
+            }
+        }
+        ray.init(num_cpus=os.cpu_count() - 2, runtime_env=runtime_env)
         # workers for loading data
         num_workers = int(3 / 4 * os.cpu_count())
         if num_workers is None:

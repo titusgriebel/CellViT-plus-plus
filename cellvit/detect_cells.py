@@ -10,6 +10,7 @@ import os
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(os.path.abspath(current_dir))
+sys.path.append(current_dir)
 sys.path.append(project_root)
 
 from cellvit.inference.cli import InferenceWSIParser

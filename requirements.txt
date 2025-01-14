@@ -72,5 +72,5 @@ tqdm==4.65.0
 ujson==5.8.0
 wandb==0.15.4
 wsidicom==0.20.4
-wsidicomizer==0.13.2
+wsidicomizer==0.14.1
 xgboost==2.1.1
