@@ -202,7 +202,10 @@ class CellViTInferenceMemory(CellViTInference):
 
         # cleaning overlapping cells
         if len(cell_dict_wsi) == 0:
-            self.logger.warning("No cells have been extracted")
+            self.logger.warning("No cells have been extracted \n"
+                                "Saving empty mask")
+            output_wsi_name = wsi_path.name.split(".")[0]
+            imageio.imwrite(os.path.join(str(self.outdir), f"{output_wsi_name}.tiff"), np.zeros((512, 512), dtype=np.int32))
             return
         keep_idx = self._post_process_edge_cells(cell_list=cell_dict_wsi)
         cell_dict_wsi = [cell_dict_wsi[idx_c] for idx_c in keep_idx]
@@ -255,7 +258,7 @@ class CellViTInferenceMemory(CellViTInference):
             mask = pred_class_map == class_idx
             pred_map[class_idx][mask] = pred_inst_map[mask]
         extracted_pred = pred_inst_map[479:991, 479:991]
-        imageio.imwrite(os.path.join(str(self.outdir), f"{output_wsi_name}_instance.tiff"), extracted_pred)
+        imageio.imwrite(os.path.join(str(self.outdir), f"{output_wsi_name}.tiff"), extracted_pred)
 
         # end of insertion
         if self.compression:
