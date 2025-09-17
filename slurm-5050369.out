@@ -1,0 +1,193 @@
+================================================================================
+JobID = 5050369
+User = u12649, Account = nim00007
+Partition = grete:shared, Nodelist = ggpu135
+================================================================================
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Traceback (most recent call last):
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 100, in <module>
+    main()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/detect_cells.py", line 24, in main
+    args = configuration_parser.parse_arguments()
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 151, in parse_arguments
+    self._check_arguments(opt)
+  File "/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/cli.py", line 159, in _check_arguments
+    assert Path(opt["model"]).exists(), "Model checkpoint file does not exist"
+AssertionError: Model checkpoint file does not exist
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on consep dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on consep dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on cpm15 dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on cpm15 dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on cpm17 dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on cpm17 dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on cryonuseg dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on cryonuseg dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on lizard dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on lizard dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on lynsec_he dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on lynsec_he dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on lynsec_ihc dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on lynsec_ihc dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on monusac dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on monusac dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on monuseg dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on monuseg dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on nuclick dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on nuclick dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on nuinsseg dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on nuinsseg dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on pannuke dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on pannuke dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on puma dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on puma dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on srsanet dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on srsanet dataset
+Running inference with CellViT-plus-plus SAM-H-x40-AMP model on tnbc dataset...
+Successfully ran inference with CellViT SAM-H-x40-AMP model on tnbc dataset
+============ Job Information ===================================================
+Submitted: 2025-01-16T19:29:13
+Started: 2025-01-16T19:29:14
+Ended: 2025-01-16T19:31:12
+Elapsed: 2 min, Limit: 2880 min, Difference: 2878 min
+CPUs: 16, Nodes: 1
+Estimated Consumption: 5.00 core-hours
+================================================================================

@@ -48,9 +48,9 @@ def run_inference(model_dir, input_dir, output_dir):
         filelist_df.to_csv(csv_filelist, index=False)
         for checkpoint in CVTPP_CP:
             checkpoint_path = os.path.join(model_dir, f"CellViT-{checkpoint}.pth")
-            output_path = os.path.join(output_dir, dataset, checkpoint)
-            if os.path.exists(output_path):
-                if len(os.listdir(output_path)) > 1:
+            output_path = os.path.join(output_dir, "inference", dataset, checkpoint)
+            if os.path.exists(os.path.join(output_dir, "results", dataset, checkpoint, 'ais_result.csv')):
+                    print(f"Inference with CellViT++ model (type: {checkpoint}) on {dataset} dataset already done")
                     continue
             os.makedirs(output_path, exist_ok=True)
             args = [
@@ -75,9 +75,9 @@ def run_inference(model_dir, input_dir, output_dir):
 
 def main():
     run_inference(
-        "/mnt/lustre-grete/usr/u12649/models/cellvit_plusplus/checkpoints",
+        "/mnt/lustre-grete/usr/u12649/models/cellvitpp/checkpoints",
         "/mnt/lustre-grete/usr/u12649/data/cvtplus/preprocessed",
-        "/mnt/lustre-grete/usr/u12649/models/cellvit_plusplus/inference/",
+        "/mnt/lustre-grete/usr/u12649/models/cellvitpp/",
     )
 
 

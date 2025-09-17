@@ -1,0 +1,966 @@
+================================================================================
+JobID = 5020322
+User = u12649, Account = nim00007
+Partition = grete:shared, Nodelist = ggpu135
+================================================================================
+2025-01-14 12:51:22,405 [INFO] - Loading model: /mnt/lustre-grete/usr/u12649/models/cellvit_plusplus/checkpoints/CellViT-SAM-H-x40-AMP.pth
+/user/titus.griebel/u12649/CellViT-plus-plus/cellvit/inference/inference_disk.py:206: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model_checkpoint = torch.load(self.model_path, map_location="cpu")
+2025-01-14 12:51:35,253 [INFO] - <All keys matched successfully>
+2025-01-14 12:51:36,024 [INFO] - Based on the hardware we limit the batch size to a maximum of:
+2025-01-14 12:51:36,024 [INFO] - 8
+2025-01-14 12:51:36,024 [INFO] - Loading inference transformations
+2025-01-14 12:51:39,743	INFO worker.py:1724 -- Started a local Ray instance.
+2025-01-14 12:51:47,657 [INFO] - Using 4 ray-workers
+2025-01-14 12:51:47,657 [INFO] - Processing whole dataset
+2025-01-14 12:51:47,657 [INFO] - Loading files from filelist /mnt/lustre-grete/usr/u12649/data/cvtplus/preprocessed/consep/file_lists/consep_filelist.csv
+2025-01-14 12:51:47,665 [INFO] - Progress: 1/77
+2025-01-14 12:51:47,665 [INFO] - Processing WSI: 0001.tiff
+2025-01-14 12:51:47,665 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:51:47,683 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:51:48,145 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:02<00:00,  2.28s/it]2025-01-14 12:51:50,429 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:06<00:00,  6.32s/it]
+2025-01-14 12:51:54,466 [INFO] - Unpack Batches
+2025-01-14 12:51:54,466 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:51:54,474 [INFO] - Finding edge-cells for merging
+2025-01-14 12:51:54,489 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:51:54,503 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:51:54,503 [INFO] - Found all overlapping cells
+2025-01-14 12:51:54,504 [INFO] - Detected cells after cleaning: 223
+2025-01-14 12:51:54,547 [INFO] - Finished with cell detection for WSI 0001
+2025-01-14 12:51:54,547 [INFO] - Stats:
+2025-01-14 12:51:54,547 [INFO] - {'Connective': 121, 'Neoplastic': 73, 'Inflammatory': 29}
+2025-01-14 12:51:54,548 [INFO] - Progress: 2/77
+2025-01-14 12:51:54,548 [INFO] - Processing WSI: 0002.tiff
+2025-01-14 12:51:54,548 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:51:54,557 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:51:54,687 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.86it/s]2025-01-14 12:51:54,946 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.42s/it]
+2025-01-14 12:52:00,110 [INFO] - Unpack Batches
+2025-01-14 12:52:00,110 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:52:00,114 [INFO] - Finding edge-cells for merging
+2025-01-14 12:52:00,125 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:52:00,144 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:52:00,144 [INFO] - Found all overlapping cells
+2025-01-14 12:52:00,146 [INFO] - Detected cells after cleaning: 215
+2025-01-14 12:52:00,172 [INFO] - Finished with cell detection for WSI 0002
+2025-01-14 12:52:00,172 [INFO] - Stats:
+2025-01-14 12:52:00,172 [INFO] - {'Neoplastic': 145, 'Connective': 43, 'Inflammatory': 27}
+2025-01-14 12:52:00,175 [INFO] - Progress: 3/77
+2025-01-14 12:52:00,175 [INFO] - Processing WSI: 0003.tiff
+2025-01-14 12:52:00,175 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:52:00,184 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:52:00,342 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.84it/s]2025-01-14 12:52:00,603 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.20s/it]
+2025-01-14 12:52:05,545 [INFO] - Unpack Batches
+2025-01-14 12:52:05,545 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:52:05,548 [INFO] - Finding edge-cells for merging
+2025-01-14 12:52:05,557 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:52:05,568 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:52:05,568 [INFO] - Found all overlapping cells
+2025-01-14 12:52:05,570 [INFO] - Detected cells after cleaning: 213
+2025-01-14 12:52:05,597 [INFO] - Finished with cell detection for WSI 0003
+2025-01-14 12:52:05,598 [INFO] - Stats:
+2025-01-14 12:52:05,598 [INFO] - {'Connective': 120, 'Neoplastic': 61, 'Inflammatory': 32}
+2025-01-14 12:52:05,599 [INFO] - Progress: 4/77
+2025-01-14 12:52:05,600 [INFO] - Processing WSI: 0005.tiff
+2025-01-14 12:52:05,600 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:52:05,610 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:52:05,742 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.87it/s]2025-01-14 12:52:06,001 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.03s/it]
+2025-01-14 12:52:10,768 [INFO] - Unpack Batches
+2025-01-14 12:52:10,768 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:52:10,771 [INFO] - Finding edge-cells for merging
+2025-01-14 12:52:10,776 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:52:10,780 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:52:10,780 [INFO] - Found all overlapping cells
+2025-01-14 12:52:10,781 [INFO] - Detected cells after cleaning: 76
+2025-01-14 12:52:10,795 [INFO] - Finished with cell detection for WSI 0005
+2025-01-14 12:52:10,795 [INFO] - Stats:
+2025-01-14 12:52:10,795 [INFO] - {'Connective': 65, 'Inflammatory': 11}
+2025-01-14 12:52:10,796 [INFO] - Progress: 5/77
+2025-01-14 12:52:10,796 [INFO] - Processing WSI: 0006.tiff
+2025-01-14 12:52:10,796 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:52:10,807 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:52:10,950 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.84it/s]2025-01-14 12:52:11,211 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.07s/it]
+2025-01-14 12:52:16,023 [INFO] - Unpack Batches
+2025-01-14 12:52:16,023 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:52:16,026 [INFO] - Finding edge-cells for merging
+2025-01-14 12:52:16,031 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:52:16,032 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:52:16,032 [INFO] - Found all overlapping cells
+2025-01-14 12:52:16,033 [INFO] - Detected cells after cleaning: 54
+2025-01-14 12:52:16,048 [INFO] - Finished with cell detection for WSI 0006
+2025-01-14 12:52:16,049 [INFO] - Stats:
+2025-01-14 12:52:16,049 [INFO] - {'Connective': 45, 'Inflammatory': 9}
+2025-01-14 12:52:16,051 [INFO] - Progress: 6/77
+2025-01-14 12:52:16,051 [INFO] - Processing WSI: 0007.tiff
+2025-01-14 12:52:16,051 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:52:16,059 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:52:16,240 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.84it/s]2025-01-14 12:52:16,501 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.15s/it]
+2025-01-14 12:52:21,394 [INFO] - Unpack Batches
+2025-01-14 12:52:21,394 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:52:21,397 [INFO] - Finding edge-cells for merging
+2025-01-14 12:52:21,406 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:52:21,412 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:52:21,412 [INFO] - Found all overlapping cells
+2025-01-14 12:52:21,414 [INFO] - Detected cells after cleaning: 117
+2025-01-14 12:52:21,439 [INFO] - Finished with cell detection for WSI 0007
+2025-01-14 12:52:21,439 [INFO] - Stats:
+2025-01-14 12:52:21,440 [INFO] - {'Neoplastic': 91, 'Connective': 15, 'Inflammatory': 11}
+2025-01-14 12:52:21,441 [INFO] - Progress: 7/77
+2025-01-14 12:52:21,441 [INFO] - Processing WSI: 0008.tiff
+2025-01-14 12:52:21,441 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:52:21,450 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:52:21,588 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.67it/s]2025-01-14 12:52:21,861 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.15s/it]
+2025-01-14 12:52:26,734 [INFO] - Unpack Batches
+2025-01-14 12:52:26,734 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:52:26,738 [INFO] - Finding edge-cells for merging
+2025-01-14 12:52:26,745 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:52:26,754 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:52:26,754 [INFO] - Found all overlapping cells
+2025-01-14 12:52:26,756 [INFO] - Detected cells after cleaning: 151
+2025-01-14 12:52:26,782 [INFO] - Finished with cell detection for WSI 0008
+2025-01-14 12:52:26,782 [INFO] - Stats:
+2025-01-14 12:52:26,782 [INFO] - {'Neoplastic': 72, 'Connective': 70, 'Inflammatory': 9}
+2025-01-14 12:52:26,784 [INFO] - Progress: 8/77
+2025-01-14 12:52:26,784 [INFO] - Processing WSI: 0009.tiff
+2025-01-14 12:52:26,784 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:52:26,794 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:52:26,922 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.19it/s]2025-01-14 12:52:27,161 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.06s/it]
+2025-01-14 12:52:31,980 [INFO] - Unpack Batches
+2025-01-14 12:52:31,980 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:52:31,984 [INFO] - Finding edge-cells for merging
+2025-01-14 12:52:31,991 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:52:31,999 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:52:31,999 [INFO] - Found all overlapping cells
+2025-01-14 12:52:32,000 [INFO] - Detected cells after cleaning: 142
+2025-01-14 12:52:32,024 [INFO] - Finished with cell detection for WSI 0009
+2025-01-14 12:52:32,024 [INFO] - Stats:
+2025-01-14 12:52:32,025 [INFO] - {'Neoplastic': 108, 'Connective': 29, 'Inflammatory': 5}
+2025-01-14 12:52:32,026 [INFO] - Progress: 9/77
+2025-01-14 12:52:32,026 [INFO] - Processing WSI: 0010.tiff
+2025-01-14 12:52:32,027 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:52:32,037 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:52:32,181 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.28it/s]2025-01-14 12:52:32,415 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:04<00:00,  4.97s/it]
+2025-01-14 12:52:37,156 [INFO] - Unpack Batches
+2025-01-14 12:52:37,156 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:52:37,160 [INFO] - Finding edge-cells for merging
+2025-01-14 12:52:37,164 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:52:37,164 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:52:37,164 [INFO] - Found all overlapping cells
+2025-01-14 12:52:37,165 [INFO] - Detected cells after cleaning: 18
+2025-01-14 12:52:37,177 [INFO] - Finished with cell detection for WSI 0010
+2025-01-14 12:52:37,177 [INFO] - Stats:
+2025-01-14 12:52:37,177 [INFO] - {'Connective': 18}
+2025-01-14 12:52:37,178 [INFO] - Progress: 10/77
+2025-01-14 12:52:37,178 [INFO] - Processing WSI: 0011.tiff
+2025-01-14 12:52:37,178 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:52:37,186 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:52:37,320 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.86it/s]2025-01-14 12:52:37,579 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:04<00:00,  4.96s/it]
+2025-01-14 12:52:42,284 [INFO] - Unpack Batches
+2025-01-14 12:52:42,284 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:52:42,286 [INFO] - Finding edge-cells for merging
+2025-01-14 12:52:42,290 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:52:42,290 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:52:42,290 [INFO] - Found all overlapping cells
+2025-01-14 12:52:42,291 [INFO] - Detected cells after cleaning: 10
+2025-01-14 12:52:42,303 [INFO] - Finished with cell detection for WSI 0011
+2025-01-14 12:52:42,303 [INFO] - Stats:
+2025-01-14 12:52:42,303 [INFO] - {'Connective': 10}
+2025-01-14 12:52:42,304 [INFO] - Progress: 11/77
+2025-01-14 12:52:42,304 [INFO] - Processing WSI: 0012.tiff
+2025-01-14 12:52:42,304 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:52:42,313 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:52:42,463 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.77it/s]2025-01-14 12:52:42,730 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:04<00:00,  4.96s/it]
+2025-01-14 12:52:47,425 [INFO] - Unpack Batches
+2025-01-14 12:52:47,425 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:52:47,428 [INFO] - Finding edge-cells for merging
+2025-01-14 12:52:47,432 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:52:47,432 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:52:47,432 [INFO] - Found all overlapping cells
+2025-01-14 12:52:47,433 [INFO] - Detected cells after cleaning: 12
+2025-01-14 12:52:47,444 [INFO] - Finished with cell detection for WSI 0012
+2025-01-14 12:52:47,444 [INFO] - Stats:
+2025-01-14 12:52:47,444 [INFO] - {'Connective': 12}
+2025-01-14 12:52:47,444 [INFO] - Progress: 12/77
+2025-01-14 12:52:47,445 [INFO] - Processing WSI: 0013.tiff
+2025-01-14 12:52:47,445 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:52:47,453 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:52:47,600 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.35it/s]2025-01-14 12:52:47,830 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:04<00:00,  4.91s/it]
+2025-01-14 12:52:52,514 [INFO] - Unpack Batches
+2025-01-14 12:52:52,514 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:52:52,517 [INFO] - Finding edge-cells for merging
+2025-01-14 12:52:52,521 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:52:52,521 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:52:52,521 [INFO] - Found all overlapping cells
+2025-01-14 12:52:52,522 [INFO] - Detected cells after cleaning: 3
+2025-01-14 12:52:52,535 [INFO] - Finished with cell detection for WSI 0013
+2025-01-14 12:52:52,535 [INFO] - Stats:
+2025-01-14 12:52:52,535 [INFO] - {'Connective': 2, 'Inflammatory': 1}
+2025-01-14 12:52:52,537 [INFO] - Progress: 13/77
+2025-01-14 12:52:52,537 [INFO] - Processing WSI: 0014.tiff
+2025-01-14 12:52:52,537 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:52:52,548 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:52:52,708 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.75it/s]2025-01-14 12:52:52,975 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:04<00:00,  4.92s/it]
+2025-01-14 12:52:57,628 [INFO] - Unpack Batches
+2025-01-14 12:52:57,628 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:52:57,631 [INFO] - Finding edge-cells for merging
+2025-01-14 12:52:57,635 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:52:57,635 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:52:57,635 [INFO] - Found all overlapping cells
+2025-01-14 12:52:57,636 [INFO] - Detected cells after cleaning: 4
+2025-01-14 12:52:57,645 [INFO] - Finished with cell detection for WSI 0014
+2025-01-14 12:52:57,645 [INFO] - Stats:
+2025-01-14 12:52:57,645 [INFO] - {'Connective': 3, 'Inflammatory': 1}
+2025-01-14 12:52:57,646 [INFO] - Progress: 14/77
+2025-01-14 12:52:57,646 [INFO] - Processing WSI: 0016.tiff
+2025-01-14 12:52:57,646 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:52:57,654 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:52:57,799 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.03it/s]2025-01-14 12:52:58,048 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.23s/it]
+2025-01-14 12:53:03,032 [INFO] - Unpack Batches
+2025-01-14 12:53:03,032 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:53:03,034 [INFO] - Finding edge-cells for merging
+2025-01-14 12:53:03,044 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:53:03,052 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:53:03,052 [INFO] - Found all overlapping cells
+2025-01-14 12:53:03,053 [INFO] - Detected cells after cleaning: 145
+2025-01-14 12:53:03,082 [INFO] - Finished with cell detection for WSI 0016
+2025-01-14 12:53:03,082 [INFO] - Stats:
+2025-01-14 12:53:03,082 [INFO] - {'Epithelial': 74, 'Connective': 40, 'Inflammatory': 31}
+2025-01-14 12:53:03,084 [INFO] - Progress: 15/77
+2025-01-14 12:53:03,084 [INFO] - Processing WSI: 0017.tiff
+2025-01-14 12:53:03,084 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:53:03,094 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:53:03,235 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.20it/s]2025-01-14 12:53:03,474 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.20s/it]
+2025-01-14 12:53:08,433 [INFO] - Unpack Batches
+2025-01-14 12:53:08,433 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:53:08,436 [INFO] - Finding edge-cells for merging
+2025-01-14 12:53:08,446 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:53:08,453 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:53:08,453 [INFO] - Found all overlapping cells
+2025-01-14 12:53:08,455 [INFO] - Detected cells after cleaning: 186
+2025-01-14 12:53:08,485 [INFO] - Finished with cell detection for WSI 0017
+2025-01-14 12:53:08,485 [INFO] - Stats:
+2025-01-14 12:53:08,485 [INFO] - {'Epithelial': 78, 'Inflammatory': 55, 'Connective': 53}
+2025-01-14 12:53:08,487 [INFO] - Progress: 16/77
+2025-01-14 12:53:08,487 [INFO] - Processing WSI: 0018.tiff
+2025-01-14 12:53:08,487 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:53:08,507 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:53:08,635 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.76it/s]2025-01-14 12:53:08,902 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.18s/it]
+2025-01-14 12:53:13,815 [INFO] - Unpack Batches
+2025-01-14 12:53:13,815 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:53:13,818 [INFO] - Finding edge-cells for merging
+2025-01-14 12:53:13,825 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:53:13,832 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:53:13,832 [INFO] - Found all overlapping cells
+2025-01-14 12:53:13,834 [INFO] - Detected cells after cleaning: 217
+2025-01-14 12:53:13,856 [INFO] - Finished with cell detection for WSI 0018
+2025-01-14 12:53:13,856 [INFO] - Stats:
+2025-01-14 12:53:13,856 [INFO] - {'Connective': 79, 'Inflammatory': 69, 'Epithelial': 69}
+2025-01-14 12:53:13,858 [INFO] - Progress: 17/77
+2025-01-14 12:53:13,858 [INFO] - Processing WSI: 0019.tiff
+2025-01-14 12:53:13,858 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:53:13,867 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:53:14,047 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.40it/s]2025-01-14 12:53:14,275 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.12s/it]
+2025-01-14 12:53:19,168 [INFO] - Unpack Batches
+2025-01-14 12:53:19,168 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:53:19,171 [INFO] - Finding edge-cells for merging
+2025-01-14 12:53:19,182 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:53:19,195 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:53:19,195 [INFO] - Found all overlapping cells
+2025-01-14 12:53:19,197 [INFO] - Detected cells after cleaning: 194
+2025-01-14 12:53:19,229 [INFO] - Finished with cell detection for WSI 0019
+2025-01-14 12:53:19,229 [INFO] - Stats:
+2025-01-14 12:53:19,230 [INFO] - {'Neoplastic': 161, 'Dead': 31, 'Inflammatory': 2}
+2025-01-14 12:53:19,233 [INFO] - Progress: 18/77
+2025-01-14 12:53:19,234 [INFO] - Processing WSI: 0020.tiff
+2025-01-14 12:53:19,234 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:53:19,243 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:53:19,361 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.77it/s]2025-01-14 12:53:19,627 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.14s/it]
+2025-01-14 12:53:24,501 [INFO] - Unpack Batches
+2025-01-14 12:53:24,501 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:53:24,504 [INFO] - Finding edge-cells for merging
+2025-01-14 12:53:24,511 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:53:24,522 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:53:24,523 [INFO] - Found all overlapping cells
+2025-01-14 12:53:24,524 [INFO] - Detected cells after cleaning: 179
+2025-01-14 12:53:24,548 [INFO] - Finished with cell detection for WSI 0020
+2025-01-14 12:53:24,548 [INFO] - Stats:
+2025-01-14 12:53:24,548 [INFO] - {'Neoplastic': 144, 'Dead': 25, 'Connective': 7, 'Inflammatory': 3}
+2025-01-14 12:53:24,550 [INFO] - Progress: 19/77
+2025-01-14 12:53:24,550 [INFO] - Processing WSI: 0021.tiff
+2025-01-14 12:53:24,550 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:53:24,559 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:53:24,705 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.14it/s]2025-01-14 12:53:24,948 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.35s/it]
+2025-01-14 12:53:30,060 [INFO] - Unpack Batches
+2025-01-14 12:53:30,060 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:53:30,063 [INFO] - Finding edge-cells for merging
+2025-01-14 12:53:30,071 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:53:30,079 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:53:30,079 [INFO] - Found all overlapping cells
+2025-01-14 12:53:30,080 [INFO] - Detected cells after cleaning: 178
+2025-01-14 12:53:30,104 [INFO] - Finished with cell detection for WSI 0021
+2025-01-14 12:53:30,104 [INFO] - Stats:
+2025-01-14 12:53:30,104 [INFO] - {'Neoplastic': 147, 'Dead': 22, 'Inflammatory': 7, 'Connective': 2}
+2025-01-14 12:53:30,106 [INFO] - Progress: 20/77
+2025-01-14 12:53:30,106 [INFO] - Processing WSI: 0022.tiff
+2025-01-14 12:53:30,106 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:53:30,114 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:53:30,232 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.39it/s]2025-01-14 12:53:30,461 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.22s/it]
+2025-01-14 12:53:35,457 [INFO] - Unpack Batches
+2025-01-14 12:53:35,457 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:53:35,460 [INFO] - Finding edge-cells for merging
+2025-01-14 12:53:35,471 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:53:35,486 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:53:35,486 [INFO] - Found all overlapping cells
+2025-01-14 12:53:35,488 [INFO] - Detected cells after cleaning: 239
+2025-01-14 12:53:35,516 [INFO] - Finished with cell detection for WSI 0022
+2025-01-14 12:53:35,516 [INFO] - Stats:
+2025-01-14 12:53:35,516 [INFO] - {'Connective': 120, 'Inflammatory': 89, 'Neoplastic': 30}
+2025-01-14 12:53:35,519 [INFO] - Progress: 21/77
+2025-01-14 12:53:35,519 [INFO] - Processing WSI: 0023.tiff
+2025-01-14 12:53:35,519 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:53:35,527 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:53:35,647 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.10it/s]2025-01-14 12:53:35,891 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.42s/it]
+2025-01-14 12:53:41,064 [INFO] - Unpack Batches
+2025-01-14 12:53:41,064 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:53:41,068 [INFO] - Finding edge-cells for merging
+2025-01-14 12:53:41,080 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:53:41,092 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:53:41,092 [INFO] - Found all overlapping cells
+2025-01-14 12:53:41,094 [INFO] - Detected cells after cleaning: 268
+2025-01-14 12:53:41,128 [INFO] - Finished with cell detection for WSI 0023
+2025-01-14 12:53:41,128 [INFO] - Stats:
+2025-01-14 12:53:41,129 [INFO] - {'Inflammatory': 108, 'Connective': 97, 'Neoplastic': 63}
+2025-01-14 12:53:41,131 [INFO] - Progress: 22/77
+2025-01-14 12:53:41,131 [INFO] - Processing WSI: 0024.tiff
+2025-01-14 12:53:41,131 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:53:41,139 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:53:41,255 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.38it/s]2025-01-14 12:53:41,484 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.26s/it]
+2025-01-14 12:53:46,520 [INFO] - Unpack Batches
+2025-01-14 12:53:46,520 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:53:46,523 [INFO] - Finding edge-cells for merging
+2025-01-14 12:53:46,532 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:53:46,542 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:53:46,542 [INFO] - Found all overlapping cells
+2025-01-14 12:53:46,543 [INFO] - Detected cells after cleaning: 268
+2025-01-14 12:53:46,572 [INFO] - Finished with cell detection for WSI 0024
+2025-01-14 12:53:46,572 [INFO] - Stats:
+2025-01-14 12:53:46,572 [INFO] - {'Inflammatory': 117, 'Connective': 80, 'Neoplastic': 71}
+2025-01-14 12:53:46,575 [INFO] - Progress: 23/77
+2025-01-14 12:53:46,575 [INFO] - Processing WSI: 0025.tiff
+2025-01-14 12:53:46,575 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:53:46,586 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:53:46,730 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.83it/s]2025-01-14 12:53:46,992 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.10s/it]
+2025-01-14 12:53:51,832 [INFO] - Unpack Batches
+2025-01-14 12:53:51,832 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:53:51,835 [INFO] - Finding edge-cells for merging
+2025-01-14 12:53:51,841 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:53:51,846 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:53:51,846 [INFO] - Found all overlapping cells
+2025-01-14 12:53:51,848 [INFO] - Detected cells after cleaning: 169
+2025-01-14 12:53:51,869 [INFO] - Finished with cell detection for WSI 0025
+2025-01-14 12:53:51,869 [INFO] - Stats:
+2025-01-14 12:53:51,869 [INFO] - {'Connective': 122, 'Inflammatory': 47}
+2025-01-14 12:53:51,871 [INFO] - Progress: 24/77
+2025-01-14 12:53:51,871 [INFO] - Processing WSI: 0026.tiff
+2025-01-14 12:53:51,871 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:53:51,880 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:53:52,001 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.71it/s]2025-01-14 12:53:52,271 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.13s/it]
+2025-01-14 12:53:57,135 [INFO] - Unpack Batches
+2025-01-14 12:53:57,135 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:53:57,138 [INFO] - Finding edge-cells for merging
+2025-01-14 12:53:57,148 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:53:57,156 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:53:57,157 [INFO] - Found all overlapping cells
+2025-01-14 12:53:57,158 [INFO] - Detected cells after cleaning: 167
+2025-01-14 12:53:57,188 [INFO] - Finished with cell detection for WSI 0026
+2025-01-14 12:53:57,188 [INFO] - Stats:
+2025-01-14 12:53:57,188 [INFO] - {'Connective': 118, 'Inflammatory': 49}
+2025-01-14 12:53:57,190 [INFO] - Progress: 25/77
+2025-01-14 12:53:57,190 [INFO] - Processing WSI: 0027.tiff
+2025-01-14 12:53:57,190 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:53:57,198 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:53:57,319 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.02it/s]2025-01-14 12:53:57,568 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.13s/it]
+2025-01-14 12:54:02,450 [INFO] - Unpack Batches
+2025-01-14 12:54:02,450 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:54:02,454 [INFO] - Finding edge-cells for merging
+2025-01-14 12:54:02,460 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:54:02,465 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:54:02,465 [INFO] - Found all overlapping cells
+2025-01-14 12:54:02,466 [INFO] - Detected cells after cleaning: 169
+2025-01-14 12:54:02,488 [INFO] - Finished with cell detection for WSI 0027
+2025-01-14 12:54:02,488 [INFO] - Stats:
+2025-01-14 12:54:02,488 [INFO] - {'Connective': 120, 'Inflammatory': 49}
+2025-01-14 12:54:02,490 [INFO] - Progress: 26/77
+2025-01-14 12:54:02,490 [INFO] - Processing WSI: 0028.tiff
+2025-01-14 12:54:02,490 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:54:02,499 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:54:02,618 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.04it/s]2025-01-14 12:54:02,866 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.16s/it]
+2025-01-14 12:54:07,775 [INFO] - Unpack Batches
+2025-01-14 12:54:07,775 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:54:07,779 [INFO] - Finding edge-cells for merging
+2025-01-14 12:54:07,784 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:54:07,791 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:54:07,791 [INFO] - Found all overlapping cells
+2025-01-14 12:54:07,793 [INFO] - Detected cells after cleaning: 179
+2025-01-14 12:54:07,817 [INFO] - Finished with cell detection for WSI 0028
+2025-01-14 12:54:07,817 [INFO] - Stats:
+2025-01-14 12:54:07,817 [INFO] - {'Epithelial': 68, 'Connective': 67, 'Inflammatory': 44}
+2025-01-14 12:54:07,820 [INFO] - Progress: 27/77
+2025-01-14 12:54:07,821 [INFO] - Processing WSI: 0029.tiff
+2025-01-14 12:54:07,821 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:54:07,829 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:54:07,955 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.61it/s]2025-01-14 12:54:08,232 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.13s/it]
+2025-01-14 12:54:13,090 [INFO] - Unpack Batches
+2025-01-14 12:54:13,090 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:54:13,093 [INFO] - Finding edge-cells for merging
+2025-01-14 12:54:13,102 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:54:13,111 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:54:13,111 [INFO] - Found all overlapping cells
+2025-01-14 12:54:13,112 [INFO] - Detected cells after cleaning: 214
+2025-01-14 12:54:13,137 [INFO] - Finished with cell detection for WSI 0029
+2025-01-14 12:54:13,138 [INFO] - Stats:
+2025-01-14 12:54:13,138 [INFO] - {'Epithelial': 87, 'Connective': 77, 'Inflammatory': 50}
+2025-01-14 12:54:13,141 [INFO] - Progress: 28/77
+2025-01-14 12:54:13,141 [INFO] - Processing WSI: 0030.tiff
+2025-01-14 12:54:13,141 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:54:13,150 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:54:13,270 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.73it/s]2025-01-14 12:54:13,539 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.24s/it]
+2025-01-14 12:54:18,509 [INFO] - Unpack Batches
+2025-01-14 12:54:18,509 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:54:18,513 [INFO] - Finding edge-cells for merging
+2025-01-14 12:54:18,519 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:54:18,525 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:54:18,525 [INFO] - Found all overlapping cells
+2025-01-14 12:54:18,527 [INFO] - Detected cells after cleaning: 197
+2025-01-14 12:54:18,551 [INFO] - Finished with cell detection for WSI 0030
+2025-01-14 12:54:18,551 [INFO] - Stats:
+2025-01-14 12:54:18,551 [INFO] - {'Connective': 74, 'Epithelial': 65, 'Inflammatory': 58}
+2025-01-14 12:54:18,555 [INFO] - Progress: 29/77
+2025-01-14 12:54:18,555 [INFO] - Processing WSI: 0031.tiff
+2025-01-14 12:54:18,556 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:54:18,566 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:54:18,686 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.68it/s]2025-01-14 12:54:18,958 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.02s/it]
+2025-01-14 12:54:23,703 [INFO] - Unpack Batches
+2025-01-14 12:54:23,703 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:54:23,706 [INFO] - Finding edge-cells for merging
+2025-01-14 12:54:23,710 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:54:23,711 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:54:23,711 [INFO] - Found all overlapping cells
+2025-01-14 12:54:23,712 [INFO] - Detected cells after cleaning: 40
+2025-01-14 12:54:23,726 [INFO] - Finished with cell detection for WSI 0031
+2025-01-14 12:54:23,726 [INFO] - Stats:
+2025-01-14 12:54:23,726 [INFO] - {'Connective': 40}
+2025-01-14 12:54:23,727 [INFO] - Progress: 30/77
+2025-01-14 12:54:23,727 [INFO] - Processing WSI: 0033.tiff
+2025-01-14 12:54:23,727 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:54:23,736 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:54:23,857 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.04it/s]2025-01-14 12:54:24,106 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.00s/it]
+2025-01-14 12:54:28,860 [INFO] - Unpack Batches
+2025-01-14 12:54:28,860 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:54:28,862 [INFO] - Finding edge-cells for merging
+2025-01-14 12:54:28,868 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:54:28,870 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:54:28,870 [INFO] - Found all overlapping cells
+2025-01-14 12:54:28,871 [INFO] - Detected cells after cleaning: 48
+2025-01-14 12:54:28,887 [INFO] - Finished with cell detection for WSI 0033
+2025-01-14 12:54:28,887 [INFO] - Stats:
+2025-01-14 12:54:28,887 [INFO] - {'Connective': 48}
+2025-01-14 12:54:28,889 [INFO] - Progress: 31/77
+2025-01-14 12:54:28,889 [INFO] - Processing WSI: 0034.tiff
+2025-01-14 12:54:28,889 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:54:28,901 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:54:29,020 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.83it/s]2025-01-14 12:54:29,282 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.01s/it]
+2025-01-14 12:54:34,033 [INFO] - Unpack Batches
+2025-01-14 12:54:34,033 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:54:34,036 [INFO] - Finding edge-cells for merging
+2025-01-14 12:54:34,041 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:54:34,042 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:54:34,042 [INFO] - Found all overlapping cells
+2025-01-14 12:54:34,043 [INFO] - Detected cells after cleaning: 26
+2025-01-14 12:54:34,056 [INFO] - Finished with cell detection for WSI 0034
+2025-01-14 12:54:34,056 [INFO] - Stats:
+2025-01-14 12:54:34,056 [INFO] - {'Connective': 18, 'Inflammatory': 8}
+2025-01-14 12:54:34,058 [INFO] - Progress: 32/77
+2025-01-14 12:54:34,058 [INFO] - Processing WSI: 0035.tiff
+2025-01-14 12:54:34,058 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:54:34,067 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:54:34,189 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.72it/s]2025-01-14 12:54:34,458 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:04<00:00,  4.96s/it]
+2025-01-14 12:54:39,152 [INFO] - Unpack Batches
+2025-01-14 12:54:39,152 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:54:39,154 [INFO] - Finding edge-cells for merging
+2025-01-14 12:54:39,159 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:54:39,160 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:54:39,160 [INFO] - Found all overlapping cells
+2025-01-14 12:54:39,161 [INFO] - Detected cells after cleaning: 49
+2025-01-14 12:54:39,176 [INFO] - Finished with cell detection for WSI 0035
+2025-01-14 12:54:39,176 [INFO] - Stats:
+2025-01-14 12:54:39,176 [INFO] - {'Connective': 32, 'Inflammatory': 17}
+2025-01-14 12:54:39,178 [INFO] - Progress: 33/77
+2025-01-14 12:54:39,178 [INFO] - Processing WSI: 0037.tiff
+2025-01-14 12:54:39,178 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:54:39,188 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:54:39,312 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.79it/s]2025-01-14 12:54:39,576 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.20s/it]
+2025-01-14 12:54:44,513 [INFO] - Unpack Batches
+2025-01-14 12:54:44,513 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:54:44,516 [INFO] - Finding edge-cells for merging
+2025-01-14 12:54:44,525 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:54:44,538 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:54:44,538 [INFO] - Found all overlapping cells
+2025-01-14 12:54:44,540 [INFO] - Detected cells after cleaning: 162
+2025-01-14 12:54:44,568 [INFO] - Finished with cell detection for WSI 0037
+2025-01-14 12:54:44,569 [INFO] - Stats:
+2025-01-14 12:54:44,569 [INFO] - {'Neoplastic': 158, 'Inflammatory': 3, 'Connective': 1}
+2025-01-14 12:54:44,570 [INFO] - Progress: 34/77
+2025-01-14 12:54:44,570 [INFO] - Processing WSI: 0038.tiff
+2025-01-14 12:54:44,571 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:54:44,579 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:54:44,698 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.77it/s]2025-01-14 12:54:44,964 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.15s/it]
+2025-01-14 12:54:49,851 [INFO] - Unpack Batches
+2025-01-14 12:54:49,851 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:54:49,854 [INFO] - Finding edge-cells for merging
+2025-01-14 12:54:49,859 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:54:49,867 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:54:49,867 [INFO] - Found all overlapping cells
+2025-01-14 12:54:49,868 [INFO] - Detected cells after cleaning: 161
+2025-01-14 12:54:49,891 [INFO] - Finished with cell detection for WSI 0038
+2025-01-14 12:54:49,891 [INFO] - Stats:
+2025-01-14 12:54:49,891 [INFO] - {'Neoplastic': 159, 'Inflammatory': 2}
+2025-01-14 12:54:49,894 [INFO] - Progress: 35/77
+2025-01-14 12:54:49,894 [INFO] - Processing WSI: 0039.tiff
+2025-01-14 12:54:49,894 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:54:49,903 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:54:50,024 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.04it/s]2025-01-14 12:54:50,272 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.21s/it]
+2025-01-14 12:54:55,237 [INFO] - Unpack Batches
+2025-01-14 12:54:55,237 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:54:55,240 [INFO] - Finding edge-cells for merging
+2025-01-14 12:54:55,247 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:54:55,256 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:54:55,256 [INFO] - Found all overlapping cells
+2025-01-14 12:54:55,257 [INFO] - Detected cells after cleaning: 175
+2025-01-14 12:54:55,280 [INFO] - Finished with cell detection for WSI 0039
+2025-01-14 12:54:55,280 [INFO] - Stats:
+2025-01-14 12:54:55,280 [INFO] - {'Neoplastic': 173, 'Inflammatory': 2}
+2025-01-14 12:54:55,284 [INFO] - Progress: 36/77
+2025-01-14 12:54:55,284 [INFO] - Processing WSI: 0040.tiff
+2025-01-14 12:54:55,284 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:54:55,293 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:54:55,412 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.67it/s]2025-01-14 12:54:55,686 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.04s/it]
+2025-01-14 12:55:00,451 [INFO] - Unpack Batches
+2025-01-14 12:55:00,451 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:55:00,454 [INFO] - Finding edge-cells for merging
+2025-01-14 12:55:00,459 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:55:00,464 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:55:00,464 [INFO] - Found all overlapping cells
+2025-01-14 12:55:00,466 [INFO] - Detected cells after cleaning: 136
+2025-01-14 12:55:00,485 [INFO] - Finished with cell detection for WSI 0040
+2025-01-14 12:55:00,486 [INFO] - Stats:
+2025-01-14 12:55:00,486 [INFO] - {'Neoplastic': 64, 'Connective': 64, 'Inflammatory': 8}
+2025-01-14 12:55:00,489 [INFO] - Progress: 37/77
+2025-01-14 12:55:00,489 [INFO] - Processing WSI: 0041.tiff
+2025-01-14 12:55:00,489 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:55:00,497 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:55:00,638 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.26it/s]2025-01-14 12:55:00,874 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.26s/it]
+2025-01-14 12:55:05,895 [INFO] - Unpack Batches
+2025-01-14 12:55:05,895 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:55:05,897 [INFO] - Finding edge-cells for merging
+2025-01-14 12:55:05,905 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:55:05,915 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:55:05,916 [INFO] - Found all overlapping cells
+2025-01-14 12:55:05,917 [INFO] - Detected cells after cleaning: 124
+2025-01-14 12:55:05,938 [INFO] - Finished with cell detection for WSI 0041
+2025-01-14 12:55:05,938 [INFO] - Stats:
+2025-01-14 12:55:05,938 [INFO] - {'Neoplastic': 107, 'Connective': 12, 'Inflammatory': 5}
+2025-01-14 12:55:05,942 [INFO] - Progress: 38/77
+2025-01-14 12:55:05,942 [INFO] - Processing WSI: 0042.tiff
+2025-01-14 12:55:05,942 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:55:05,952 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:55:06,074 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.96it/s]2025-01-14 12:55:06,327 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.12s/it]
+2025-01-14 12:55:11,193 [INFO] - Unpack Batches
+2025-01-14 12:55:11,193 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:55:11,196 [INFO] - Finding edge-cells for merging
+2025-01-14 12:55:11,202 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:55:11,209 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:55:11,209 [INFO] - Found all overlapping cells
+2025-01-14 12:55:11,210 [INFO] - Detected cells after cleaning: 151
+2025-01-14 12:55:11,233 [INFO] - Finished with cell detection for WSI 0042
+2025-01-14 12:55:11,233 [INFO] - Stats:
+2025-01-14 12:55:11,233 [INFO] - {'Neoplastic': 69, 'Connective': 69, 'Inflammatory': 13}
+2025-01-14 12:55:11,235 [INFO] - Progress: 39/77
+2025-01-14 12:55:11,235 [INFO] - Processing WSI: 0043.tiff
+2025-01-14 12:55:11,235 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:55:11,245 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:55:11,384 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.21it/s]2025-01-14 12:55:11,623 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.00s/it]
+2025-01-14 12:55:16,387 [INFO] - Unpack Batches
+2025-01-14 12:55:16,387 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:55:16,389 [INFO] - Finding edge-cells for merging
+2025-01-14 12:55:16,394 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:55:16,395 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:55:16,395 [INFO] - Found all overlapping cells
+2025-01-14 12:55:16,395 [INFO] - Detected cells after cleaning: 11
+2025-01-14 12:55:16,411 [INFO] - Finished with cell detection for WSI 0043
+2025-01-14 12:55:16,411 [INFO] - Stats:
+2025-01-14 12:55:16,411 [INFO] - {'Connective': 10, 'Inflammatory': 1}
+2025-01-14 12:55:16,413 [INFO] - Progress: 40/77
+2025-01-14 12:55:16,413 [INFO] - Processing WSI: 0044.tiff
+2025-01-14 12:55:16,413 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:55:16,421 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:55:16,546 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.76it/s]2025-01-14 12:55:16,812 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.05s/it]
+2025-01-14 12:55:21,594 [INFO] - Unpack Batches
+2025-01-14 12:55:21,595 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:55:21,597 [INFO] - Finding edge-cells for merging
+2025-01-14 12:55:21,601 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:55:21,602 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:55:21,602 [INFO] - Found all overlapping cells
+2025-01-14 12:55:21,603 [INFO] - Detected cells after cleaning: 18
+2025-01-14 12:55:21,615 [INFO] - Finished with cell detection for WSI 0044
+2025-01-14 12:55:21,615 [INFO] - Stats:
+2025-01-14 12:55:21,615 [INFO] - {'Connective': 17, 'Inflammatory': 1}
+2025-01-14 12:55:21,616 [INFO] - Progress: 41/77
+2025-01-14 12:55:21,617 [INFO] - Processing WSI: 0045.tiff
+2025-01-14 12:55:21,617 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:55:21,626 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:55:21,768 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.24it/s]2025-01-14 12:55:22,005 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.03s/it]
+2025-01-14 12:55:26,803 [INFO] - Unpack Batches
+2025-01-14 12:55:26,803 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:55:26,806 [INFO] - Finding edge-cells for merging
+2025-01-14 12:55:26,810 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:55:26,812 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:55:26,812 [INFO] - Found all overlapping cells
+2025-01-14 12:55:26,813 [INFO] - Detected cells after cleaning: 34
+2025-01-14 12:55:26,826 [INFO] - Finished with cell detection for WSI 0045
+2025-01-14 12:55:26,826 [INFO] - Stats:
+2025-01-14 12:55:26,826 [INFO] - {'Connective': 29, 'Inflammatory': 5}
+2025-01-14 12:55:26,828 [INFO] - Progress: 42/77
+2025-01-14 12:55:26,828 [INFO] - Processing WSI: 0046.tiff
+2025-01-14 12:55:26,828 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:55:26,837 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:55:26,969 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.23it/s]2025-01-14 12:55:27,206 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.11s/it]
+2025-01-14 12:55:32,077 [INFO] - Unpack Batches
+2025-01-14 12:55:32,078 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:55:32,080 [INFO] - Finding edge-cells for merging
+2025-01-14 12:55:32,085 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:55:32,086 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:55:32,086 [INFO] - Found all overlapping cells
+2025-01-14 12:55:32,087 [INFO] - Detected cells after cleaning: 45
+2025-01-14 12:55:32,101 [INFO] - Finished with cell detection for WSI 0046
+2025-01-14 12:55:32,101 [INFO] - Stats:
+2025-01-14 12:55:32,101 [INFO] - {'Connective': 40, 'Inflammatory': 5}
+2025-01-14 12:55:32,103 [INFO] - Progress: 43/77
+2025-01-14 12:55:32,104 [INFO] - Processing WSI: 0047.tiff
+2025-01-14 12:55:32,104 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:55:32,115 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:55:32,255 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.28it/s]2025-01-14 12:55:32,489 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:04<00:00,  4.96s/it]
+2025-01-14 12:55:37,216 [INFO] - Unpack Batches
+2025-01-14 12:55:37,216 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:55:37,219 [INFO] - Finding edge-cells for merging
+2025-01-14 12:55:37,223 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:55:37,224 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:55:37,224 [INFO] - Found all overlapping cells
+2025-01-14 12:55:37,225 [INFO] - Detected cells after cleaning: 24
+2025-01-14 12:55:37,238 [INFO] - Finished with cell detection for WSI 0047
+2025-01-14 12:55:37,238 [INFO] - Stats:
+2025-01-14 12:55:37,238 [INFO] - {'Connective': 22, 'Inflammatory': 2}
+2025-01-14 12:55:37,240 [INFO] - Progress: 44/77
+2025-01-14 12:55:37,241 [INFO] - Processing WSI: 0048.tiff
+2025-01-14 12:55:37,241 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:55:37,250 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:55:37,382 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.67it/s]2025-01-14 12:55:37,655 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:04<00:00,  4.99s/it]
+2025-01-14 12:55:42,371 [INFO] - Unpack Batches
+2025-01-14 12:55:42,371 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:55:42,374 [INFO] - Finding edge-cells for merging
+2025-01-14 12:55:42,380 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:55:42,383 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:55:42,383 [INFO] - Found all overlapping cells
+2025-01-14 12:55:42,384 [INFO] - Detected cells after cleaning: 78
+2025-01-14 12:55:42,400 [INFO] - Finished with cell detection for WSI 0048
+2025-01-14 12:55:42,400 [INFO] - Stats:
+2025-01-14 12:55:42,400 [INFO] - {'Connective': 69, 'Inflammatory': 9}
+2025-01-14 12:55:42,402 [INFO] - Progress: 45/77
+2025-01-14 12:55:42,402 [INFO] - Processing WSI: 0049.tiff
+2025-01-14 12:55:42,402 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:55:42,412 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:55:42,560 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.30it/s]2025-01-14 12:55:42,793 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.19s/it]
+2025-01-14 12:55:47,748 [INFO] - Unpack Batches
+2025-01-14 12:55:47,748 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:55:47,751 [INFO] - Finding edge-cells for merging
+2025-01-14 12:55:47,760 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:55:47,769 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:55:47,769 [INFO] - Found all overlapping cells
+2025-01-14 12:55:47,770 [INFO] - Detected cells after cleaning: 194
+2025-01-14 12:55:47,794 [INFO] - Finished with cell detection for WSI 0049
+2025-01-14 12:55:47,795 [INFO] - Stats:
+2025-01-14 12:55:47,795 [INFO] - {'Neoplastic': 175, 'Inflammatory': 12, 'Connective': 7}
+2025-01-14 12:55:47,798 [INFO] - Progress: 46/77
+2025-01-14 12:55:47,798 [INFO] - Processing WSI: 0050.tiff
+2025-01-14 12:55:47,798 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:55:47,807 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:55:47,927 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.30it/s]2025-01-14 12:55:48,160 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.27s/it]
+2025-01-14 12:55:53,196 [INFO] - Unpack Batches
+2025-01-14 12:55:53,197 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:55:53,200 [INFO] - Finding edge-cells for merging
+2025-01-14 12:55:53,211 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:55:53,227 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:55:53,227 [INFO] - Found all overlapping cells
+2025-01-14 12:55:53,229 [INFO] - Detected cells after cleaning: 249
+2025-01-14 12:55:53,262 [INFO] - Finished with cell detection for WSI 0050
+2025-01-14 12:55:53,262 [INFO] - Stats:
+2025-01-14 12:55:53,262 [INFO] - {'Neoplastic': 240, 'Inflammatory': 5, 'Connective': 4}
+2025-01-14 12:55:53,265 [INFO] - Progress: 47/77
+2025-01-14 12:55:53,266 [INFO] - Processing WSI: 0051.tiff
+2025-01-14 12:55:53,266 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:55:53,274 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:55:53,396 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.26it/s]2025-01-14 12:55:53,631 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.24s/it]
+2025-01-14 12:55:58,637 [INFO] - Unpack Batches
+2025-01-14 12:55:58,637 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:55:58,640 [INFO] - Finding edge-cells for merging
+2025-01-14 12:55:58,649 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:55:58,658 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:55:58,658 [INFO] - Found all overlapping cells
+2025-01-14 12:55:58,659 [INFO] - Detected cells after cleaning: 183
+2025-01-14 12:55:58,684 [INFO] - Finished with cell detection for WSI 0051
+2025-01-14 12:55:58,684 [INFO] - Stats:
+2025-01-14 12:55:58,684 [INFO] - {'Neoplastic': 174, 'Inflammatory': 5, 'Connective': 4}
+2025-01-14 12:55:58,688 [INFO] - Progress: 48/77
+2025-01-14 12:55:58,688 [INFO] - Processing WSI: 0052.tiff
+2025-01-14 12:55:58,688 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:55:58,701 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:55:58,826 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.24it/s]2025-01-14 12:55:59,063 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.46s/it]
+2025-01-14 12:56:04,286 [INFO] - Unpack Batches
+2025-01-14 12:56:04,286 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:56:04,289 [INFO] - Finding edge-cells for merging
+2025-01-14 12:56:04,300 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:56:04,317 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:56:04,317 [INFO] - Found all overlapping cells
+2025-01-14 12:56:04,319 [INFO] - Detected cells after cleaning: 528
+2025-01-14 12:56:04,358 [INFO] - Finished with cell detection for WSI 0052
+2025-01-14 12:56:04,358 [INFO] - Stats:
+2025-01-14 12:56:04,358 [INFO] - {'Inflammatory': 478, 'Connective': 50}
+2025-01-14 12:56:04,363 [INFO] - Progress: 49/77
+2025-01-14 12:56:04,363 [INFO] - Processing WSI: 0053.tiff
+2025-01-14 12:56:04,363 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:56:04,371 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:56:04,492 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.88it/s]2025-01-14 12:56:04,750 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.55s/it]
+2025-01-14 12:56:10,045 [INFO] - Unpack Batches
+2025-01-14 12:56:10,045 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:56:10,048 [INFO] - Finding edge-cells for merging
+2025-01-14 12:56:10,058 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:56:10,074 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:56:10,074 [INFO] - Found all overlapping cells
+2025-01-14 12:56:10,076 [INFO] - Detected cells after cleaning: 491
+2025-01-14 12:56:10,112 [INFO] - Finished with cell detection for WSI 0053
+2025-01-14 12:56:10,113 [INFO] - Stats:
+2025-01-14 12:56:10,113 [INFO] - {'Inflammatory': 438, 'Connective': 53}
+2025-01-14 12:56:10,116 [INFO] - Progress: 50/77
+2025-01-14 12:56:10,116 [INFO] - Processing WSI: 0054.tiff
+2025-01-14 12:56:10,116 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:56:10,124 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:56:10,245 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.22it/s]2025-01-14 12:56:10,482 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.45s/it]
+2025-01-14 12:56:15,692 [INFO] - Unpack Batches
+2025-01-14 12:56:15,692 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:56:15,695 [INFO] - Finding edge-cells for merging
+2025-01-14 12:56:15,705 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:56:15,720 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:56:15,720 [INFO] - Found all overlapping cells
+2025-01-14 12:56:15,721 [INFO] - Detected cells after cleaning: 498
+2025-01-14 12:56:15,762 [INFO] - Finished with cell detection for WSI 0054
+2025-01-14 12:56:15,762 [INFO] - Stats:
+2025-01-14 12:56:15,762 [INFO] - {'Inflammatory': 441, 'Connective': 57}
+2025-01-14 12:56:15,766 [INFO] - Progress: 51/77
+2025-01-14 12:56:15,766 [INFO] - Processing WSI: 0055.tiff
+2025-01-14 12:56:15,766 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:56:15,775 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:56:15,952 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.14it/s]2025-01-14 12:56:16,194 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.09s/it]
+2025-01-14 12:56:21,044 [INFO] - Unpack Batches
+2025-01-14 12:56:21,044 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:56:21,047 [INFO] - Finding edge-cells for merging
+2025-01-14 12:56:21,054 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:56:21,060 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:56:21,060 [INFO] - Found all overlapping cells
+2025-01-14 12:56:21,061 [INFO] - Detected cells after cleaning: 167
+2025-01-14 12:56:21,086 [INFO] - Finished with cell detection for WSI 0055
+2025-01-14 12:56:21,086 [INFO] - Stats:
+2025-01-14 12:56:21,086 [INFO] - {'Neoplastic': 122, 'Connective': 27, 'Dead': 17, 'Inflammatory': 1}
+2025-01-14 12:56:21,089 [INFO] - Progress: 52/77
+2025-01-14 12:56:21,089 [INFO] - Processing WSI: 0056.tiff
+2025-01-14 12:56:21,089 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:56:21,098 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:56:21,221 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.18it/s]2025-01-14 12:56:21,461 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.16s/it]
+2025-01-14 12:56:26,379 [INFO] - Unpack Batches
+2025-01-14 12:56:26,379 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:56:26,383 [INFO] - Finding edge-cells for merging
+2025-01-14 12:56:26,389 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:56:26,396 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:56:26,396 [INFO] - Found all overlapping cells
+2025-01-14 12:56:26,398 [INFO] - Detected cells after cleaning: 163
+2025-01-14 12:56:26,421 [INFO] - Finished with cell detection for WSI 0056
+2025-01-14 12:56:26,421 [INFO] - Stats:
+2025-01-14 12:56:26,421 [INFO] - {'Neoplastic': 91, 'Connective': 64, 'Dead': 6, 'Inflammatory': 2}
+2025-01-14 12:56:26,423 [INFO] - Progress: 53/77
+2025-01-14 12:56:26,423 [INFO] - Processing WSI: 0057.tiff
+2025-01-14 12:56:26,423 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:56:26,434 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:56:26,562 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.74it/s]2025-01-14 12:56:26,830 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.17s/it]
+2025-01-14 12:56:31,729 [INFO] - Unpack Batches
+2025-01-14 12:56:31,729 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:56:31,731 [INFO] - Finding edge-cells for merging
+2025-01-14 12:56:31,739 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:56:31,748 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:56:31,748 [INFO] - Found all overlapping cells
+2025-01-14 12:56:31,749 [INFO] - Detected cells after cleaning: 175
+2025-01-14 12:56:31,775 [INFO] - Finished with cell detection for WSI 0057
+2025-01-14 12:56:31,775 [INFO] - Stats:
+2025-01-14 12:56:31,775 [INFO] - {'Neoplastic': 142, 'Dead': 24, 'Connective': 9}
+2025-01-14 12:56:31,778 [INFO] - Progress: 54/77
+2025-01-14 12:56:31,778 [INFO] - Processing WSI: 0058.tiff
+2025-01-14 12:56:31,778 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:56:31,787 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:56:31,909 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.25it/s]2025-01-14 12:56:32,145 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.05s/it]
+2025-01-14 12:56:36,960 [INFO] - Unpack Batches
+2025-01-14 12:56:36,960 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:56:36,963 [INFO] - Finding edge-cells for merging
+2025-01-14 12:56:36,969 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:56:36,974 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:56:36,974 [INFO] - Found all overlapping cells
+2025-01-14 12:56:36,975 [INFO] - Detected cells after cleaning: 142
+2025-01-14 12:56:36,996 [INFO] - Finished with cell detection for WSI 0058
+2025-01-14 12:56:36,996 [INFO] - Stats:
+2025-01-14 12:56:36,996 [INFO] - {'Epithelial': 112, 'Connective': 19, 'Inflammatory': 11}
+2025-01-14 12:56:36,999 [INFO] - Progress: 55/77
+2025-01-14 12:56:37,000 [INFO] - Processing WSI: 0059.tiff
+2025-01-14 12:56:37,000 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:56:37,008 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:56:37,139 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  4.08it/s]2025-01-14 12:56:37,385 [INFO] - Waiting for final batches to be processed...
+100%|██████████| 1/1 [00:05<00:00,  5.15s/it]
+2025-01-14 12:56:42,295 [INFO] - Unpack Batches
+2025-01-14 12:56:42,295 [INFO] - Initializing Cell-Postprocessor
+2025-01-14 12:56:42,299 [INFO] - Finding edge-cells for merging
+2025-01-14 12:56:42,306 [INFO] - Removal of cells detected multiple times
+2025-01-14 12:56:42,314 [INFO] - Iteration 0: Found overlap of # cells: 0
+2025-01-14 12:56:42,314 [INFO] - Found all overlapping cells
+2025-01-14 12:56:42,316 [INFO] - Detected cells after cleaning: 139
+2025-01-14 12:56:42,344 [INFO] - Finished with cell detection for WSI 0059
+2025-01-14 12:56:42,344 [INFO] - Stats:
+2025-01-14 12:56:42,344 [INFO] - {'Epithelial': 112, 'Connective': 15, 'Inflammatory': 12}
+2025-01-14 12:56:42,347 [INFO] - Progress: 56/77
+2025-01-14 12:56:42,347 [INFO] - Processing WSI: 0060.tiff
+2025-01-14 12:56:42,347 [INFO] - Preparing WSI - Loading tissue region and prepare patches
+2025-01-14 12:56:42,355 [INFO] - Using target_mpp: 0.25 instead of 0.25
+2025-01-14 12:56:42,475 [INFO] - Extracting cells using CellViT...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.87it/s]2025-01-14 12:56:42,734 [INFO] - Waiting for final batches to be processed...
+slurmstepd: error: *** JOB 5020322 ON ggpu135 CANCELLED AT 2025-01-14T12:56:44 ***
+============ Job Information ===================================================
+Submitted: 2025-01-14T12:50:53
+Started: 2025-01-14T12:50:54
+Ended: 2025-01-14T12:56:45
+Elapsed: 6 min, Limit: 2880 min, Difference: 2874 min
+CPUs: 16, Nodes: 1
+Estimated Consumption: 15.00 core-hours
+================================================================================
