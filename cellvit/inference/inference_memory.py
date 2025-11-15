@@ -33,7 +33,11 @@ from pathopatch.patch_extraction.dataset import (
 )
 import snappy
 from cellvit.inference.wsi_meta import load_wsi_meta
-
+# inserted imports:
+import cv2
+import numpy as np
+import imageio.v3 as imageio
+import os
 
 class CellViTInferenceMemory(CellViTInference):
     def __init__(
@@ -198,7 +202,10 @@ class CellViTInferenceMemory(CellViTInference):
 
         # cleaning overlapping cells
         if len(cell_dict_wsi) == 0:
-            self.logger.warning("No cells have been extracted")
+            self.logger.warning("No cells have been extracted \n"
+                                "Saving empty mask")
+            output_wsi_name = wsi_path.name.split(".")[0]
+            imageio.imwrite(os.path.join(str(self.outdir), f"{output_wsi_name}.tiff"), np.zeros((512, 512), dtype=np.int32))
             return
         keep_idx = self._post_process_edge_cells(cell_list=cell_dict_wsi)
         cell_dict_wsi = [cell_dict_wsi[idx_c] for idx_c in keep_idx]
@@ -229,6 +236,31 @@ class CellViTInferenceMemory(CellViTInference):
             "type_map": self.label_map,
             "cells": cell_dict_wsi,
         }
+        # insertion for saving of instance masks
+        img_shape = (1024, 1024)
+        num_classes = self.run_conf["data"]["num_nuclei_classes"]
+        pred_inst_map = np.zeros(img_shape, dtype=np.int32)
+        pred_class_map = np.zeros(img_shape, dtype=np.int32)
+        for cell_id, cell_data in enumerate(cell_dict_wsi['cells'], start=1):
+            contour = np.array(cell_data["contour"]) 
+            contour[:, 0] = np.clip(contour[:, 0], 0, img_shape[1])
+            contour[:, 1] = np.clip(contour[:, 1], 0, img_shape[0])
+            contour = contour.reshape((-1, 1, 2))
+            cell_type = cell_data["type"]
+            contour = np.vstack((contour, [contour[0]]))
+            contour = contour.astype(np.int32)
+            cell_id = int(cell_id)
+            cv2.fillPoly(pred_inst_map, [contour], cell_id)
+            cv2.fillPoly(pred_class_map, [contour], cell_type + 1)
+
+        pred_map = np.zeros((num_classes + 1, *img_shape), dtype=np.int32)
+        for class_idx in range(1, num_classes + 1):
+            mask = pred_class_map == class_idx
+            pred_map[class_idx][mask] = pred_inst_map[mask]
+        extracted_pred = pred_inst_map[479:991, 479:991]
+        imageio.imwrite(os.path.join(str(self.outdir), f"{output_wsi_name}.tiff"), extracted_pred)
+
+        # end of insertion
         if self.compression:
             with open(
                 str(self.outdir / f"{output_wsi_name}_cells.json.snappy"), "wb"
